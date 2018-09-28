@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4lp-zZ-Av1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kgi-rw-3sP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5v-5X-rrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4lp-zZ-Av1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w9m-aN-PTi">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2uO-Vg-fNU" kind="relationship" relationship="rootViewController" id="B38-mi-uI0"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-43.628185907046479"/>
+        </scene>
+        <!--Search repos for username-->
+        <scene sceneID="tjF-S5-KGv">
+            <objects>
+                <viewController id="2uO-Vg-fNU" customClass="RepositoriesViewController" customModule="GithubSearchRepositories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2nI-At-9ek">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-Mk-cuy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T30-3w-Q3a">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="KIG-R4-nDv" detailTextLabel="Sbv-NV-HJF" style="IBUITableViewCellStyleSubtitle" id="Mjp-Gh-VR0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mjp-Gh-VR0" id="aE6-uk-b3Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KIG-R4-nDv">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sbv-NV-HJF">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PHh-Mk-cuy" firstAttribute="width" secondItem="2nI-At-9ek" secondAttribute="width" id="3J1-Nk-Fo1"/>
+                            <constraint firstItem="T30-3w-Q3a" firstAttribute="top" secondItem="PHh-Mk-cuy" secondAttribute="bottom" id="6OL-8J-i2o"/>
+                            <constraint firstItem="T30-3w-Q3a" firstAttribute="width" secondItem="PHh-Mk-cuy" secondAttribute="width" id="YMH-Fp-ckh"/>
+                            <constraint firstItem="T30-3w-Q3a" firstAttribute="centerX" secondItem="PHh-Mk-cuy" secondAttribute="centerX" id="gD2-6o-rNo"/>
+                            <constraint firstItem="PHh-Mk-cuy" firstAttribute="top" secondItem="CX0-ES-Snq" secondAttribute="top" id="kIZ-YL-qdN"/>
+                            <constraint firstItem="CX0-ES-Snq" firstAttribute="bottom" secondItem="T30-3w-Q3a" secondAttribute="bottom" id="nUV-dI-vSt"/>
+                            <constraint firstItem="PHh-Mk-cuy" firstAttribute="centerX" secondItem="CX0-ES-Snq" secondAttribute="centerX" id="sdi-MK-knR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CX0-ES-Snq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search repos for username" id="Pww-YX-ga4"/>
+                    <connections>
+                        <outlet property="searchBar" destination="PHh-Mk-cuy" id="Omr-q6-391"/>
+                        <outlet property="tableView" destination="T30-3w-Q3a" id="mEC-aa-i4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="par-V3-gvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>
