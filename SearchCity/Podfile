@@ -8,4 +8,5 @@ target 'SearchCity' do
   # Pods for SearchCity
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.0'
 end

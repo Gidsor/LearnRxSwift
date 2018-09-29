@@ -15,7 +15,7 @@ class SearchTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var searchCity = [String]()
-    let cities = ["Tyumen", "Moscow", "Novosibirsk", "Yekaterinburg", "Omsk", "Samara", "Tver"]
+    var cityList = CityList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class SearchTableViewController: UITableViewController {
             .debounce(0.5, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .subscribe(onNext: { [unowned self] query in
-                self.searchCity = self.cities.filter { $0.hasPrefix(query) }
+                self.searchCity = self.cityList.cities.filter { $0.hasPrefix(query) }
                 self.tableView.reloadData()
             })
     }

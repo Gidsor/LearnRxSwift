@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A0B0C8027DFF3A0F3C652E84 /* Pods_SearchCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2688021469C74DCBAA239B66 /* Pods_SearchCity.framework */; };
+		C025F491215F2C7200B86956 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025F490215F2C7200B86956 /* CityModel.swift */; };
+		C0C71527215F2B6B002E593A /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = C0C71526215F2B6B002E593A /* city.list.json */; };
 		C0ECBA40215D271A00B8B3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ECBA3F215D271A00B8B3B2 /* AppDelegate.swift */; };
 		C0ECBA45215D271A00B8B3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0ECBA43215D271A00B8B3B2 /* Main.storyboard */; };
 		C0ECBA47215D271C00B8B3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0ECBA46215D271C00B8B3B2 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		2688021469C74DCBAA239B66 /* Pods_SearchCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C025F490215F2C7200B86956 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		C0C71526215F2B6B002E593A /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
 		C0ECBA3C215D271A00B8B3B2 /* SearchCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0ECBA3F215D271A00B8B3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0ECBA44215D271A00B8B3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				C0ECBA3F215D271A00B8B3B2 /* AppDelegate.swift */,
+				C025F490215F2C7200B86956 /* CityModel.swift */,
 				C0ECBA54215D2D0900B8B3B2 /* SearchTableViewController.swift */,
+				C0C71526215F2B6B002E593A /* city.list.json */,
 				C0ECBA43215D271A00B8B3B2 /* Main.storyboard */,
 				C0ECBA46215D271C00B8B3B2 /* Assets.xcassets */,
 				C0ECBA48215D271C00B8B3B2 /* LaunchScreen.storyboard */,
@@ -149,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0ECBA4A215D271C00B8B3B2 /* LaunchScreen.storyboard in Resources */,
+				C0C71527215F2B6B002E593A /* city.list.json in Resources */,
 				C0ECBA47215D271C00B8B3B2 /* Assets.xcassets in Resources */,
 				C0ECBA45215D271A00B8B3B2 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +175,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SearchCity/Pods-SearchCity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -175,6 +183,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -212,6 +221,7 @@
 			files = (
 				C0ECBA55215D2D0900B8B3B2 /* SearchTableViewController.swift in Sources */,
 				C0ECBA40215D271A00B8B3B2 /* AppDelegate.swift in Sources */,
+				C025F491215F2C7200B86956 /* CityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
