@@ -9,17 +9,16 @@
 import SwiftyJSON
 
 class Weather {
-    var name: String?
-    var degrees: Double?
+    var name: String? = "Not found"
+    var degrees: Double? = 0
     
     init(json: JSON) {
-        name = json["name"].stringValue
+        let cityName = json["name"].stringValue
         
-        if name != "" {
+        if cityName != "" {
+            name = cityName
             // Convert from kelvin to celsius
             degrees = (json["main"]["temp"].doubleValue - 273.15).rounded()
-        } else {
-            name = "Not found"
         }
     }
 }
