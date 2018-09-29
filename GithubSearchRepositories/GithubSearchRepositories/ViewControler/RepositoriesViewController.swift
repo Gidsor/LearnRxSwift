@@ -11,8 +11,9 @@ import ObjectMapper
 import RxAlamofire
 import RxSwift
 import RxCocoa
+import SafariServices
 
-class RepositoriesViewController: UIViewController {
+class RepositoriesViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -32,6 +33,8 @@ class RepositoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRx()
+        
+        tableView.delegate = self
     }
     
     func setupRx() {
@@ -46,5 +49,12 @@ class RepositoriesViewController: UIViewController {
                 return cell
             }
             .disposed(by: disposeBag)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let url = URL(string: tableView.cellForRow(at: indexPath)!.detailTextLabel!.text!) else { return }
+       
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true, completion: nil)
     }
 }

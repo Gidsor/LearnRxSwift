@@ -19,7 +19,7 @@ class Repository: Mappable {
     func mapping(map: Map) {
         identifier <- map["id"]
         language <- map["language"]
-        url <- map["url"]
+        url <- map["html_url"]
         name <- map["name"]
     }
 }
